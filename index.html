@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational IT Platform</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Подключаем jQuery -->
+</head>
+
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1 class="title">Платформа для обучения IT профессиям</h1>
+            <p class="subtitle">Информационная система для изучения передовых технологий</p>
+            <div class="buttons">
+                <a href="#" class="btn" id="login-btn">Войти</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Всплывающее окно авторизации -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Авторизация</h2>
+            <form>
+                <label for="login">Логин</label>
+                <input type="text" id="login" name="login" required>
+
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="btn">Войти</button>
+
+                <!-- Ссылка "Забыли пароль?" -->
+                <p>
+                    <a href="#" id="forgot-password-link">Забыли пароль?</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Всплывающее окно для восстановления пароля -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Восстановление пароля</h2>
+            <form>
+                <label for="first-name">Имя</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Фамилия</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="phone">Номер телефона</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"
+                    placeholder="Введите 10-значный номер">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+            <p style="margin-top: 20px; color: #0088cc;">
+                Менеджер свяжется с вами и отправит новую информацию для восстановления пароля.
+            </p>
+        </div>
+    </div>
+
+
+    <script src="js/login-modal.js"></script>
+</body>
+
+</html>
